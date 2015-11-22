@@ -1,2 +1,2 @@
-# debian-home-files
-Debian Home Files (.bashrc, .bash_profile, .gitconfig, v.v..)
+# linux-etc-skel
+Linux /etc/skel (.bashrc, .bash_profile, .gitconfig, v.v..)
