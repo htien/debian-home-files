@@ -1,0 +1,25 @@
+[core]
+	autocrlf = input
+[alias]
+	log1 = log --pretty=oneline --abbrev-commit
+	log2 = log --color --shortstat --graph --max-count=10 --raw
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = true
+[merge]
+	summary = true
+[pack]
+	packSizeLimit = 2g
+[user]
+	name = Tien Nguyen
+	email = htien@users.noreply.github.com
+[http "https://repo.or.cz"]
+	sslCAInfo = <absolute-path-to>/<root-cert>.pem
+	sslCert = <absolute-path-to>/<user-cert>.pem
+	sslKey = <absolute-path-to>/<your_ssh_private_key>
+	sslCertPasswordProtected = true
+	sslVerify = true
+[gui]
+	encoding = utf-8
