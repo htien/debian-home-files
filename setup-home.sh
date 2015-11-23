@@ -1,9 +1,9 @@
 #!/bin/sh
 
-set -ex
+set -e
 
-PREV_DIR=$(pwd)
-DIR="$(cd -P "$(dirname $0)" && pwd)"
+PREV_DIR="$(pwd)"
+DIR="$(cd -P \"$(dirname $0)\" && pwd)"
 
 cp bash_profile $HOME/.bash_profile
 cp bashrc       $HOME/.bashrc
