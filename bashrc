@@ -70,9 +70,9 @@ if ${use_color} ; then
 	fi
 
 	if [[ ${EUID} == 0 ]] ; then
-		PS1='\n[\[\e[1;31m\]\h\[\e[1;34m\] \w\[\e[0m\]] Err:$?\n\l# '
+		PS1='\n[\[\e[1;31m\]\u@\h\[\e[1;34m\] \w\[\e[0m\]] Err:$?\n\# '
 	else
-		PS1='\n[\[\e[1;31m\]\u@\h\[\e[1;34m\] \w\[\e[0m\]] Err:$?\n\l$ '
+		PS1='\n[\[\e[1;31m\]\u@\h\[\e[1;34m\] \w\[\e[0m\]] Err:$?\n\$ '
 	fi
 
 	# `ls' to be colorized:
@@ -88,7 +88,7 @@ if ${use_color} ; then
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
-		PS1='\u@\h \w \$ '
+		PS1='\u@\h \w \# '
 	else
 		PS1='\u@\h \w \$ '
 	fi
