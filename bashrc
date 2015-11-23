@@ -110,3 +110,6 @@ umask 077
 # alias rm='rm -i'
 # alias cp='cp -i'
 # alias mv='mv -i'
+
+# MySQL history file
+MYSQL_HISTFILE=/dev/null
