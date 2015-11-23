@@ -70,9 +70,9 @@ if ${use_color} ; then
 	fi
 
 	if [[ ${EUID} == 0 ]] ; then
-		PS1='\n[\[\e[1;31m\]\u@\h\[\e[1;34m\] \w\[\e[0m\]] Err:$?\n\# '
+		PS1='\n[\[\e[1;31m\]\u@\h\[\e[1;34m\] \w\[\e[0m\]] Err:$?\n# '
 	else
-		PS1='\n[\[\e[1;31m\]\u@\h\[\e[1;34m\] \w\[\e[0m\]] Err:$?\n\$ '
+		PS1='\n[\[\e[1;31m\]\u@\h\[\e[1;34m\] \w\[\e[0m\]] Err:$?\n$ '
 	fi
 
 	# `ls' to be colorized:
