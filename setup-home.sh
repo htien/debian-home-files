@@ -2,13 +2,17 @@
 
 set -e
 
+# ${BASH_SOURCE[0]} same as $0
+
 PREV_DIR="$(pwd)"
-DIR="$(cd -P \"$(dirname $0)\" && pwd)"
+DIR="$(cd -P "$(dirname "$0")" && pwd)"
+
+cd $DIR
 
 cp bash_profile $HOME/.bash_profile
 cp bashrc       $HOME/.bashrc
 cp gitconfig    $HOME/.gitconfig
-cp -R ssh/      $HOME/.ssh
+([ -d $HOME/.ssh/ ] || mkdir $HOME/.ssh) && cp -R ssh/* $HOME/.ssh/
 
 chmod -R u=rwX,go= \
 	$HOME/.bash* \
@@ -16,4 +20,4 @@ chmod -R u=rwX,go= \
 	$HOME/.ssh/
 
 # Get to previous working directory
-cd $DIR
+cd $PREV_DIR
